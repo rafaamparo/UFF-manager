@@ -1,0 +1,244 @@
+{
+  "periodos": [
+    {
+      "titulo_periodo": "1° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "PROGRAMAÇÃO DE COMPUTADORES I",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "FUNDAMENTOS DE ARQUITETURAS DE COMPUTADORES",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "CÁLCULO I",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "FUNDAMENTOS DE CÁLCULO E GEOMETRIA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "LAB. RESOLUÇÃO DE PROBLEMAS",
+          "carga_horaria": "32h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "2° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "PROGRAMAÇÃO ESTRUTURADA",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "CIRCUITOS DIGITAIS",
+          "carga_horaria": "68h"
+        },
+        {
+          "nome_disciplina": "CÁLCULO II",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "MATEMÁTICA DISCRETA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "LAB. PROGRAMAÇÃO DE JOGOS",
+          "carga_horaria": "32h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "3° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "ESTRUTURAS DE DADOS E SEUS ALGORITMOS",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+          "carga_horaria": "68h"
+        },
+        {
+          "nome_disciplina": "ARQUITETURAS DE COMPUTADORES",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "ESTATÍSTICA BÁSICA",
+          "carga_horaria": "68h"
+        },
+        {
+          "nome_disciplina": "ÁLGEBRA LINEAR",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "FÍSICA I",
+          "carga_horaria": "68h"
+        },
+        {
+          "nome_disciplina": "FÍSICA EXPERIMENTAL I",
+          "carga_horaria": "30h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "4° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "BANCO DE DADOS I",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "ENGENHARIA DE SOFTWARE I",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "SISTEMAS OPERACIONAIS",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "AVALIAÇÃO DE DESEMPENHO",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "LÓGICA PARA CIÊNCIA DA COMPUTAÇÃO",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "LAB. DE DISPOSITIVOS MÓVEIS",
+          "carga_horaria": "32h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "5° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "BANCO DE DADOS II",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "ANÁLISE E PROJETO DE ALGORITMOS",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "DESENVOLVIMENTO WEB",
+          "carga_horaria": "68h"
+        },
+        {
+          "nome_disciplina": "PROJETO DE SOFTWARE",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "REDES DE COMPUTADORES I",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "MÉTODOS NUMÉRICOS",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "LINGUAGENS DE PROGRAMAÇÃO",
+          "carga_horaria": "64h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "6° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "PROGRAMAÇÃO CIENTÍFICA",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "COMPUTAÇÃO GRÁFICA",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "ALGORITMOS EM GRAFOS",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "ENGENHARIA DE SOFTWARE II",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "REDES DE COMPUTADORES II",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "LINGUAGENS FORMAIS E TEORIA DA COMPUTAÇÃO",
+          "carga_horaria": "64h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "7° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "INTELIGÊNCIA ARTIFICIAL",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "INTERFACE HOMEM-MÁQUINA",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "LABORATÓRIO DE PROGRAMAÇÃO PARALELA",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "PESQUISA OPERACIONAL",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "SISTEMAS DISTRIBUÍDOS",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "COMPILADORES",
+          "carga_horaria": "64h"
+        },
+        {
+          "nome_disciplina": "PROJETO FINAL I",
+          "carga_horaria": "32h"
+        }
+      ]
+    },
+    {
+      "titulo_periodo": "8° PERÍODO",
+      "materias": [
+        {
+          "nome_disciplina": "OPTATIVA HUMANÍSTICA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "OPTATIVA HUMANÍSTICA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "OPTATIVA TECNOLÓGICA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "OPTATIVA TECNOLÓGICA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "OPTATIVA TECNOLÓGICA",
+          "carga_horaria": "60h"
+        },
+        {
+          "nome_disciplina": "COMPUTAÇÃO E SOCIEDADE",
+          "carga_horaria": "32h"
+        },
+        {
+          "nome_disciplina": "PROJETO FINAL II",
+          "carga_horaria": "64h"
+        }
+      ]
+    }
+  ]
+}
