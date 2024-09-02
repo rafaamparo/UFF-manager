@@ -1,0 +1,102 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: aliceblue;
+  text-align: center;
+  display: flex;
+  background-color: #11114e;
+  background-size: cover;
+  background-position: center 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.periodo {
+  display: flex;
+  color: #000000;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f0f8ff;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 15px 5px 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.titulo_periodo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.nome_disciplina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.materias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: left;
+  border: 0;
+  padding: 20px 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.disciplina_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #afcee9;
+  flex-direction: column;
+  color: #000000;
+  max-width: 200px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.disciplina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.carga_horaria_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2e8ee;
+  color: #000000;
+  max-width: 20px;
+  width: 100%;
+  border-radius: 100px;
+  padding: 3px;
+}
