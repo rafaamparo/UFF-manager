@@ -56,6 +56,7 @@ function carregar() {
       });
     });
 }
+
 carregar();
 
 class Disciplina {
@@ -76,6 +77,28 @@ class Disciplina {
     this.cursada = false;
   }
 }
+
+function cursar_disciplina(disciplina) {
+  disciplina.cursar();
+}
+
+function pretende_cursar_disciplina(disciplina) {
+  disciplina.pretende_cursar();
+}
+
+fetch("http://127.0.0.1:5500/materias.json")
+  .then((response) => response.json())
+  .then((content) => {
+    content.periodos.map((periodo) => {
+      periodo.materias.map((materia) => {
+        let disciplina = new Disciplina(
+          materia.nome_disciplina,
+          materia.carga_horaria
+        );
+        console.log(disciplina);
+      });
+    });
+  });
 
 function cursar_disciplina(disciplina) {
   disciplina.cursar();
