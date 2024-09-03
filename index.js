@@ -103,3 +103,7 @@ fetch("http://127.0.0.1:5500/materias.json")
 function cursar_disciplina(disciplina) {
   disciplina.cursar();
 }
+
+function pretende_cursar_disciplina(disciplina) {
+  disciplina.pretende_cursar();
+}
