@@ -17,8 +17,8 @@ function carregar() {
         periodoElement.appendChild(box_materias);
 
         periodo.materias.map((materia) => {
-          const materiaElement = document.createElement("button");
-          materiaElement.classList.add("disciplina_button");
+          const materiaElement = document.createElement("div");
+          materiaElement.classList.add("disciplina_box");
 
           let disciplina = document.createElement("div");
           disciplina.classList.add("disciplina");
@@ -36,7 +36,18 @@ function carregar() {
           carga.appendChild(carga_texto);
           disciplina.appendChild(carga);
 
+          let botoes_acoes = document.createElement("div");
+          botoes_acoes.classList.add("acoes");
+
+          const botao_cursada = document.createElement("button");
+          botao_cursada.classList.add("botao_cursada");
+          const botao_cursar = document.createElement("button");
+          botao_cursar.classList.add("botao_cursar");
+          botoes_acoes.appendChild(botao_cursada);
+          botoes_acoes.appendChild(botao_cursar);
+
           materiaElement.appendChild(disciplina);
+          materiaElement.appendChild(botoes_acoes);
           box_materias.appendChild(materiaElement);
         });
         periodoElement.appendChild(box_materias);
@@ -46,3 +57,26 @@ function carregar() {
     });
 }
 carregar();
+
+class Disciplina {
+  constructor(nome, carga_horaria) {
+    this.nome = nome;
+    this.carga_horaria = carga_horaria;
+    this.cursada = false;
+    this.possivel = false;
+  }
+
+  cursar() {
+    this.cursada = true;
+    this.possivel = false;
+  }
+
+  pretende_cursar() {
+    this.possivel = true;
+    this.cursada = false;
+  }
+}
+
+function cursar_disciplina(disciplina) {
+  disciplina.cursar();
+}
