@@ -42,17 +42,24 @@ function carregar(periodos) {
       const botao_cursada = document.createElement("button");
       botao_cursada.classList.add("botao_cursada");
       botao_cursada.addEventListener("click", () => {
-        cursar_disciplina(materia);
-        periodo.incrementar_horas(materia);
+        if (materia.get_situacao_cursada() === false) {
+          cursar_disciplina(materia);
+          periodo.incrementar_horas(materia);
+        } else turnback(materia, periodo);
         check_integralizacao(periodo);
       });
-      const botao_cursar = document.createElement("button");
-      botao_cursar.classList.add("botao_cursar");
-      botao_cursar.addEventListener("click", () => {
-        pretende_cursar_disciplina(materia);
+      const botao_pretende = document.createElement("button");
+      botao_pretende.classList.add("botao_cursar");
+      botao_pretende.addEventListener("click", () => {
+        if (materia.get_situacao_pretensao() === false) {
+          if (materia.get_situacao_cursada())
+            periodo.decrementar_horas(materia);
+          pretende_cursar_disciplina(materia);
+        } else turnback(materia, periodo);
+        check_integralizacao(periodo);
       });
       botoes_acoes.appendChild(botao_cursada);
-      botoes_acoes.appendChild(botao_cursar);
+      botoes_acoes.appendChild(botao_pretende);
 
       materiaElement.appendChild(disciplina);
       materiaElement.appendChild(botoes_acoes);
@@ -83,15 +90,25 @@ class Disciplina {
     this.cursada = false;
   }
 
+  limpar() {
+    this.possivel = false;
+    this.cursada = false;
+  }
+
   get_carga_horaria() {
     return this.carga_horaria;
   }
 
-  get_situacao() {
+  get_situacao_cursada() {
     return this.cursada;
   }
 
+  get_situacao_pretensao() {
+    return this.possivel;
+  }
+
   set_situacao(indicador) {
+    if (indicador === 0) this.limpar();
     if (indicador === 1) this.cursar();
     else if (indicador === 2) this.pretende_cursar();
   }
@@ -107,7 +124,7 @@ class Periodo {
     this.horas_cursadas = 0;
     this.disciplinas.map((disciplina) => {
       this.total_horas += disciplina.get_carga_horaria();
-      if (disciplina.get_situacao()) {
+      if (disciplina.get_situacao_cursada()) {
         this.horas_cursadas += disciplina.get_carga_horaria();
       }
     });
@@ -120,7 +137,7 @@ class Periodo {
   get_integralizacao() {
     if (this.horas_cursadas === this.total_horas) {
       this.integral = true;
-    }
+    } else this.integral = false;
     return this.integral;
   }
 
@@ -132,6 +149,11 @@ class Periodo {
     this.horas_cursadas += disciplina.get_carga_horaria();
     return this.horas_cursadas;
   }
+
+  decrementar_horas(disciplina) {
+    this.horas_cursadas -= disciplina.get_carga_horaria();
+    return this.horas_cursadas;
+  }
 }
 
 function cursar_disciplina(disciplina) {
@@ -139,7 +161,7 @@ function cursar_disciplina(disciplina) {
   const materia_div = document.getElementById(
     `${disciplina.index}-materiaElement`
   );
-  materia_div.style.backgroundColor = "green";
+  materia_div.style.backgroundColor = "#008000";
 }
 
 function pretende_cursar_disciplina(disciplina) {
@@ -147,16 +169,27 @@ function pretende_cursar_disciplina(disciplina) {
   const materia_div = document.getElementById(
     `${disciplina.index}-materiaElement`
   );
-  materia_div.style.backgroundColor = "yellow";
+  materia_div.style.backgroundColor = "#ffff00";
 }
 
 function check_integralizacao(periodo) {
+  const periodo_div = document.getElementById(
+    `${periodo.index}-periodoElement`
+  );
   if (periodo.get_integralizacao()) {
-    const periodo_div = document.getElementById(
-      `${periodo.index}-periodoElement`
-    );
-    periodo_div.style.backgroundColor = "purple";
+    periodo_div.style.backgroundColor = "#88cbff";
+  } else {
+    periodo_div.style.backgroundColor = "#f0f8ff";
   }
+}
+
+function turnback(disciplina, periodo) {
+  const materia_div = document.getElementById(
+    `${disciplina.index}-materiaElement`
+  );
+  if (disciplina.get_situacao_cursada()) periodo.decrementar_horas(disciplina);
+  materia_div.style.backgroundColor = "#afcee9";
+  disciplina.set_situacao(0);
 }
 
 let array_periodos = [];
